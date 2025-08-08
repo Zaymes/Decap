@@ -4,4 +4,5 @@ This repository holds all blog content in MDX format and images, managed via Dec
 
 - Content posts are in `content/posts/`
 - Images are stored in `images/<post-slug>/`
-- Please edit content via Decap CMS at `/admin`# Decap
+- Please edit content via Decap CMS at `/admin`
+
