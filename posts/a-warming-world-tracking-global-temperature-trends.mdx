@@ -1,0 +1,67 @@
+---
+title: "A Warming World: Tracking Global Temperature Trends"
+summary: Over the past century, global temperatures have been rising, reshaping
+  ecosystems and economies. This data story explores average global surface
+  temperatures from 1900 to 2020, highlighting a clear upward trend. Using
+  historical data (simulated for this example), we’ll visualize how temperatures
+  have increased, with a notable acceleration since the 1980s, reflecting
+  human-driven climate impact
+publishedAt: 2025-08-11T11:13:00.000+05:45
+lastUpdated: 2025-08-11T11:13:00.000+05:45
+category: some category
+tags:
+  - tags
+featuredImage: /images/{{slug}}/image.png
+author:
+  name: James Shresthja
+  role: Data Analyst
+readTime: -4
+featured: false
+---
+## The Story
+
+Over the past century, global temperatures have been rising, reshaping ecosystems and economies. This data story explores average global surface temperatures from 1900 to 2020, highlighting a clear upward trend. Using historical data (simulated for this example), we’ll visualize how temperatures have increased, with a notable acceleration since the 1980s, reflecting human-driven climate impacts.
+
+## The Data
+
+The dataset includes average global temperatures (in °C) relative to a pre-industrial baseline, recorded every decade from 1900 to 2020. The values show a gradual rise, with sharper increases in recent decades, aligning with industrialization and greenhouse gas emissions.
+
+## The Visualization
+
+The line chart below, generated using Python’s Matplotlib, illustrates the temperature anomaly over time. The x-axis shows the years, and the y-axis represents the temperature anomaly in °C. A trend line emphasizes the steady increase, with annotations highlighting key milestones.
+
+```apex
+import matplotlib.pyplot as plt
+
+# Data
+years = [1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]
+temps = [0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.50, 0.65, 0.80, 1.00, 1.20, 1.40]
+
+# Create line plot
+plt.figure(figsize=(10, 6))
+plt.plot(years, temps, marker='o', linestyle='-', color='red', label='Temperature Anomaly')
+plt.title('Global Temperature Anomaly (1900-2020)', fontsize=14)
+plt.xlabel('Year', fontsize=12)
+plt.ylabel('Temperature Anomaly (°C)', fontsize=12)
+plt.grid(True)
+plt.legend()
+
+# Annotate key points
+plt.annotate('Rapid rise begins (~1980)', xy=(1980, 0.65), xytext=(1960, 0.9),
+             arrowprops=dict(facecolor='black', shrink=0.05))
+plt.annotate('1.4°C above baseline', xy=(2020, 1.40), xytext=(2000, 1.2),
+             arrowprops=dict(facecolor='black', shrink=0.05))
+
+plt.savefig('temperature_trend.png')
+plt.show()
+```
+
+## Insights
+
+The chart reveals a clear trend: global temperatures have risen by 1.4°C over 120 years. The gradual increase from 1900 to 1970 steepens after 1980, coinciding with increased industrial activity and carbon emissions. This visualization underscores the urgency of addressing climate change, as the trajectory suggests continued warming without intervention.
+
+![some graph](/images/{{slug}}/image.png "title of image")
+
+## Conclusion
+
+This data story highlights the undeniable rise in global temperatures, driven by human activity. The line chart serves as a stark reminder of the need for sustainable practices to mitigate further warming and its impacts on our planet.
